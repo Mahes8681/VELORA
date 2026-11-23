@@ -1,12 +1,15 @@
 
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>VOLORA LOGIN</title>
+
     <link rel="stylesheet" href="a.css">
 </head>
 
@@ -19,15 +22,23 @@
             <h1 class="h1">VOLORA</h1>
 
             <div class="c">
+
                 <label for="Username" class="cc">Username:</label>
+
                 <input id="Username" type="text" name="Username">
-                <span class="error" id="Username Error" style="color:red; font-size: 15px;"></span>
+
+                <span class="error" id="Username Error" style="color:red; font-size:15px;"></span>
+
             </div>
 
             <div class="d">
+
                 <label for="Password" class="cc">Password:</label>
+
                 <input id="Password" type="password" name="Password">
-                <span class="Error" id="Password Error" style="color:red; font-size: 15px;"></span>
+
+                <span class="Error" id="Password Error" style="color:red; font-size:15px;"></span>
+
             </div>
 
             <div class="btn-group">
@@ -48,55 +59,69 @@
 
     <script>
 
-        document.getElementById("submitBtn").addEventListener("click", function() {
+        const submitBtn = document.getElementById("submitBtn");
 
-            let Username = document.getElementById("Username").value.trim();
+        const resetBtn = document.getElementById("btn2");
 
-            let Password = document.getElementById("Password").value.trim();
+        const usernameInput = document.getElementById("Username");
 
-            let UsernameError = document.getElementById("Username Error");
+        const passwordInput = document.getElementById("Password");
 
-            let PasswordError = document.getElementById("Password Error");
+        const usernameError = document.getElementById("Username Error");
 
-            UsernameError.innerText = "";
+        const passwordError = document.getElementById("Password Error");
 
-            PasswordError.innerText = "";
+
+        submitBtn.addEventListener("click", function() {
+
+            let username = usernameInput.value.trim();
+
+            let password = passwordInput.value.trim();
+
+            usernameError.innerText = "";
+
+            passwordError.innerText = "";
 
             let hasError = false;
 
-            if (Username === "") {
 
-                UsernameError.innerText = "لطفا نام کاربری را وارد کنید";
+            if (username === "") {
+
+                usernameError.innerText = "لطفا نام کاربری را وارد کنید";
+
+                hasError = true;
+
+            }
+
+
+            if (password === "") {
+
+                passwordError.innerText = "لطفا رمز عبور را وارد کنید";
 
                 hasError = true;
 
             }
 
-            if (Password === "") {
-
-                PasswordError.innerText = "لطفا رمز عبور را وارد کنید";
-
-                hasError = true;
-
-            }
 
             if (hasError === false) {
 
-                window.location.href = "index.html";
+                window.location.href = "https://mahes8681.github.io/VELORA/";
 
             }
 
         });
 
-        document.getElementById("btn2").addEventListener("click", function() {
 
-            document.getElementById("Username Error").innerText = "";
+        resetBtn.addEventListener("click", function() {
 
-            document.getElementById("Password Error").innerText = "";
+            usernameError.innerText = "";
+
+            passwordError.innerText = "";
 
         });
 
     </script>
 
 </body>
+
 </html>
