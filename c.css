@@ -1,7 +1,83 @@
-/* =========================================
-   تنظیمات کلی کارت محصول
-   ========================================= */
-   .product-card {
+ 
+
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    display: block;
+    position: relative;
+    width: 100%;
+    min-width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: brown;
+    box-sizing: border-box;
+}
+
+header .div1 {
+    width: 100%;
+    max-width: none;
+    min-width: 100%;
+    height: 100px;
+    margin: 0 !important;
+    padding: 0 35px;
+    background-color: brown;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.logo {
+    position: absolute;
+    right: 35px;
+    font-size: 30px;
+    color: red;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.nav1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    font-family: iran;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav1 a,
+.a,
+.b,
+.c,
+.e,
+.f,
+.g {
+    text-decoration: none;
+    margin: 0;
+    color: white;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.product-card {
     background: #fff;
     padding: 12px;
     border-radius: 12px;
@@ -18,14 +94,11 @@
     box-shadow: 0 5px 18px rgba(0,0,0,0.10);
 }
 
-/* =========================================
-   تنظیمات کادر عکس (محل قرارگیری عکس)
-   ========================================= */
 .product-image {
     width: 100%;
-    height: 250px; /* ارتفاع کادر عکس - اگر خواستی کوتاه‌تر/بلندتر بشه فقط این عدد رو تغییر بده */
-    background: #f5f5f5; /* رنگ خاکستری روشن کادر */
-    border-radius: 8px; /* گوشه‌های گرد */
+    height: 250px;
+    background: #f5f5f5;
+    border-radius: 8px;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -33,20 +106,14 @@
     margin: 0 auto;
 }
 
-/* =========================================
-   تنظیمات خود عکس (پر کردن کادر)
-   ========================================= */
 .product-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* این دستور باعث میشه عکس کل کادر رو بپوشونه */
-    object-position: center; /* اگر سر لباس‌ها بریده شد، این خط رو به top تغییر بده */
+    object-fit: cover;
+    object-position: center;
     display: block;
 }
 
-/* =========================================
-   تنظیمات متن‌ها و دکمه‌ها
-   ========================================= */
 .product-card h6 {
     margin: 12px 0;
     font-weight: bold;
@@ -56,8 +123,7 @@
     color: #555;
     font-weight: bold;
     margin-bottom: 12px;
-    flex-grow: 1; /* این باعث میشه اگر متن طولانی شد، دکمه‌ها همیشه پایین تراز باشن */
-    
+    flex-grow: 1;
 }
 
 .product-card .btn {
@@ -66,20 +132,19 @@
     margin-top: auto;
     border: none;
     background-color: brown;
-
 }
 
-/* =========================================
-   تنظیمات چیدمان (Row و ستون‌ها)
-   ========================================= */
+.add-cart {
+    color: white;
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
     justify-content: center !important;
-    align-items: stretch; /* برای اینکه ارتفاع همه کارت‌ها یکسان باشه */
+    align-items: stretch;
 }
 
-/* موبایل و تبلت: ۲ محصول در هر ردیف */
 .row > div {
     flex: 0 0 50% !important;
     max-width: 50% !important;
@@ -87,7 +152,6 @@
     display: flex;
 }
 
-/* دسکتاپ: ۴ محصول در هر ردیف (برای صفحات بزرگتر از 992 پیکسل) */
 @media (min-width: 992px) {
     .row > div {
         flex: 0 0 25% !important;
@@ -95,24 +159,22 @@
     }
 }
 
-.text-centermb-4fw-bold{
-
-font-family: iran;
-font-size: 50px;
-
+.text-centermb-4fw-bold {
+    font-family: iran;
+    font-size: 50px;
 }
 
-.add-cart{
-color: white;
-
+h2.text-center {
+    color: red;
+    font-size: 32px;
+    font-weight: bold;
 }
 
-.text-centermy-4{
-width: 20%;
-height: 50px;
+.text-centermy-4 {
+    width: 20%;
+    height: 50px;
 }
 
-/* بزرگ‌تر کردن بخش سبد خرید */
 .text-center.my-4 {
     width: 100%;
     min-height: 180px;
@@ -126,349 +188,127 @@ height: 50px;
     border-radius: 15px;
 }
 
-/* بزرگ‌تر کردن عنوان */
 .text-center.my-4 h5 {
     font-size: 24px;
     margin-bottom: 15px;
 }
 
-/* بزرگ‌تر کردن شمارنده */
 #cart-count {
     font-size: 28px;
     font-weight: bold;
 }
 
-/* بزرگ‌تر کردن دکمه */
 #clear-cart {
     font-size: 16px;
     padding: 10px 25px;
     border-radius: 10px;
     border: none;
     background-color: brown;
-
-
-}
-#clear-cart{
     color: white;
 }
-
-h2.text-center {
-    color: red;
-    font-size: 32px;
-    font-weight: bold;
-}
-
-
-.nav1{
-    align-items:center;
-    justify-content: center;
-    display: flex;
-    text-align: center;
-    text-decoration: none;
-    gap: 50px;font-family: iran;
-    font-size: 30px;
-    border: none;
-    text-decoration: none;
-    color: white;
-    }
-    .div1{
-    background-color: brown;width:100% ;
-    height:100px ;text-align: center;margin: 0;text-decoration: none;
-    display: flex;justify-content: center;align-items: center;position: relative;
-    text-decoration: none;
-    color: white;
-}
-
-
-
-
-.logo{
-position: absolute; right: 35px;
-font-size: 30px;
-color: red;
-text-decoration: none;
-
-}
-.a{
-
-    text-decoration: none;
-    margin-top: 21px;
-    color: white;
-    font-size: 20px;
-    gap: 50px;
-}
-
-.b{
-
-    text-decoration: none;
-    margin-top: 21px;
-    color: white;
-    font-size: 20px;
-    gap: 50px;
-}
-.c{
-
-    text-decoration: none;
-    margin-top: 21px;
-    color: white;
-    font-size: 20px;
-    gap: 50px;
-}
-.e{
-
-    text-decoration: none;
-    margin-top: 21px;
-    color: white;
-    font-size: 20px;
-    gap: 50px;
-
-}
-.f{
-
-    text-decoration: none;
-    margin-top: 21px;
-    color: white;
-    font-size: 20px;
-    gap: 50px;
-}
-.g{
-
-    text-decoration: none;
-    margin-top: 21px;
-    color: white;
-    font-size: 20px;
-    gap: 50px;
-}
-/* Responsive Header */
-
-header {
-    width: 100%;
-    box-sizing: border-box;
-}
-
-header .div1 {
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 15px 4%;
-    box-sizing: border-box;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-header .logo {
-    flex-shrink: 0;
-    text-decoration: none;
-}
-
-header .nav1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 100%;
-}
-
-header .nav1 a {
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-/* Mobile Header Fix */
 
 @media screen and (max-width: 768px) {
-
     header {
-        width: 100% !important;
-        height: auto !important;
-        overflow: visible !important;
+        width: 100%;
+        min-width: 100%;
+        height: auto;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
     header .div1 {
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-        min-height: 0 !important;
-
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: center !important;
-        align-items: center !important;
-
-        flex-wrap: nowrap !important;
-        gap: 15px !important;
-
-        padding: 18px 10px !important;
+        width: 100%;
+        min-width: 100%;
+        max-width: none;
+        height: auto;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 15px;
+        padding: 18px 10px;
         margin: 0 !important;
-        box-sizing: border-box !important;
     }
 
     header .div1 > .logo {
-        position: static !important;
-        display: block !important;
-        float: none !important;
-
-        width: 100% !important;
-        text-align: center !important;
-
-        margin: 0 !important;
-        padding: 5px !important;
-
-        font-size: 23px !important;
-        line-height: 1.5 !important;
+        position: static;
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 5px;
+        font-size: 23px;
+        line-height: 1.5;
     }
 
     header .div1 > .nav1 {
-        position: static !important;
-
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: wrap !important;
-
-        justify-content: center !important;
-        align-items: center !important;
-
-        gap: 12px 15px !important;
-
-        margin: 0 !important;
-        padding: 5px 0 !important;
-
-        box-sizing: border-box !important;
-        overflow: visible !important;
+        direction: rtl;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 12px 15px;
+        margin: 0;
+        padding: 10px 15px;
+        overflow: visible;
     }
 
     header .div1 > .nav1 a {
-        position: static !important;
-        display: inline-block !important;
-        float: none !important;
-
-        flex: 0 1 auto !important;
-
-        width: auto !important;
-        max-width: 100% !important;
-
-        font-size: 13px !important;
-        line-height: 1.8 !important;
-
-        text-align: center !important;
-        white-space: normal !important;
-
-        margin: 0 !important;
-        padding: 4px 3px !important;
-        box-sizing: border-box !important;
+        display: block;
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+        font-size: 13px;
+        line-height: 1.8;
+        text-align: center;
+        white-space: nowrap;
+        margin: 0;
+        padding: 5px 7px;
     }
-}
-
-/* Small Phones */
-
-@media screen and (max-width: 480px) {
-
-    header .div1 {
-        padding: 15px 8px !important;
-        gap: 12px !important;
-    }
-
-    header .div1 > .logo {
-        font-size: 21px !important;
-    }
-
-    header .div1 > .nav1 {
-        gap: 9px 12px !important;
-    }
-
-    header .div1 > .nav1 a {
-        font-size: 12px !important;
-    }
-}
-
-@media screen and (max-width: 768px) {
-
-    header .div1 > .nav1 {
-        direction: rtl !important;
-        width: 100% !important;
-        min-width: 0 !important;
-        padding: 10px 15px !important;
-        margin: 0 auto !important;
-
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        align-items: center !important;
-
-        box-sizing: border-box !important;
-        overflow: visible !important;
-    }
-
-    header .div1 > .nav1 a {
-        flex: 0 0 auto !important;
-        display: block !important;
-        position: static !important;
-
-        margin: 0 !important;
-        padding: 5px 7px !important;
-
-        white-space: nowrap !important;
-        text-align: center !important;
-        box-sizing: border-box !important;
-    }
-
-    header .div1 {
-        width: 100% !important;
-        max-width: 100% !important;
-        overflow: visible !important;
-        box-sizing: border-box !important;
-    }
-
-    header {
-        width: 100% !important;
-        overflow: visible !important;
-    }
-}
-
-@media screen and (max-width: 768px) {
 
     h2.text-center.mb-4.fw-bold.h4 {
-        display: block !important;
-
-        width: 100% !important;
-        max-width: 100% !important;
-
-        text-align: center !important;
-
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
         margin: 20px auto !important;
-        padding: 0 10px !important;
-
-        font-size: 21px !important;
-        line-height: 1.8 !important;
-
-        direction: rtl !important;
-        box-sizing: border-box !important;
-
-        white-space: normal !important;
-        overflow-wrap: break-word !important;
+        padding: 0 10px;
+        font-size: 21px;
+        line-height: 1.8;
+        direction: rtl;
+        white-space: normal;
+        overflow-wrap: break-word;
     }
-
 }
 
 @media screen and (max-width: 480px) {
-
-    h2.text-center.mb-4.fw-bold.h4 {
-        font-size: 19px !important;
+    header .div1 {
+        padding: 15px 8px;
+        gap: 12px;
     }
 
-}
-  
-        
+    header .div1 > .logo {
+        font-size: 21px;
+    }
 
+    header .div1 > .nav1 {
+        gap: 9px 12px;
+    }
+
+    header .div1 > .nav1 a {
+        font-size: 12px;
+    }
+
+    h2.text-center.mb-4.fw-bold.h4 {
+        font-size: 19px;
+    }
+}
 
 
 
